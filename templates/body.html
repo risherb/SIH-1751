@@ -1,13 +1,11 @@
 <div class="body-container">
-    <!-- Left Section: Image Upload -->
+    <!-- Left Section: Live CCTV Footage -->
     <div class="left-section">
-        <div class="upload-section">
-            <h2>Upload Image</h2>
-            <div class="upload-box">
-                <input type="file" id="file-input" accept="image/*">
-                <label for="file-input" class="upload-label">
-                    <i class="fas fa-upload"></i> Choose an Image
-                </label>
+        <div class="cctv-section">
+            <h2>Live CCTV Footage</h2>
+            <div class="cctv-box">
+                <img src="path_to_cctv_image_or_video_placeholder" alt="Live CCTV Footage" class="cctv-image">
+                <p class="cctv-status">Live Feed Status: <span class="cctv-indicator"></span></p>
             </div>
         </div>
 
@@ -57,7 +55,7 @@
         gap: 20px;
     }
 
-    .upload-section, .status-section, .alert-toggle, .options-section {
+    .cctv-section, .status-section, .alert-toggle, .options-section {
         background-color: rgba(13, 35, 35, 0.8);
         border-radius: 10px;
         padding: 20px;
@@ -74,32 +72,36 @@
         margin-bottom: 20px;
     }
 
-    .upload-box {
+    .cctv-box {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 20px;
-        border: 2px dashed #1b4d4e;
+        border: 2px solid #1b4d4e;
         border-radius: 10px;
         transition: all 0.3s;
-        cursor: pointer;
+        background-color: #102c40;
+        position: relative;
     }
 
-    .upload-label {
-        display: flex;
-        align-items: center;
-        font-size: 18px;
-        color: #9ebdbd;
-        cursor: pointer;
-        padding: 10px 20px;
-        background-color: #123b3c;
-        border-radius: 8px;
-        transition: background-color 0.3s;
+    .cctv-image {
+        max-width: 100%;
+        border-radius: 10px;
+        border: 1px solid #2a4a4a;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
-    .upload-label:hover {
-        background-color: #1d6060;
+    .cctv-status {
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: 'Orbitron', sans-serif;
+        color: #e0e0e0;
+    }
+
+    .cctv-indicator {
+        color: #28a745;
+        font-weight: bold;
     }
 
     .alert-toggle {
