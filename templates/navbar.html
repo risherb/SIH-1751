@@ -5,7 +5,10 @@
             <i class="fas fa-bars"></i>
         </div>
         <!-- Navbar Title -->
-        <div class="navbar-title">Swachhta and LiFE Dashboard</div>
+        <div class="navbar-title">
+            <span>Swachhta and LiFE Dashboard</span>
+            <span class="navbar-subtitle">PostLIFE</span>
+        </div>
         <!-- Login/Signup Buttons -->
         <div class="navbar-actions">
             <button class="login-btn">Login</button>
@@ -17,6 +20,10 @@
             </div>
             <button class="signup-btn">Signup</button>
         </div>
+    </div>
+    <!-- Address Section -->
+    <div class="navbar-address">
+        Bagru Sub Post Office, Bagru, Jaipur, Rajasthan, India, Code: 303007 | Officer: Rishabh Shetty
     </div>
 </nav>
 
@@ -50,9 +57,8 @@
         background: linear-gradient(135deg, #0b3d3b, #102c40, #0f2d30);
         color: white;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
+        flex-direction: column;
+        padding: 8px 16px;
         z-index: 1000;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
@@ -77,14 +83,24 @@
     }
 
     .navbar-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
         font-size: 20px;
-        margin-left: 20px;
         font-weight: bold;
+    }
+
+    .navbar-subtitle {
+        font-size: 14px;
+        padding: 2px 6px;
+        border-radius: 8px;
+        background-color: #1b4d4e;
+        color: #cfd8dc;
     }
 
     .navbar-actions {
         display: flex;
-        gap: 10px;
+        gap: 8px;
         position: relative;
     }
 
@@ -178,6 +194,16 @@
         color: white;
         display: block;
         font-size: 14px;
+    }
+
+    .navbar-address {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #cfd8dc;
+        margin-top: 4px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 4px;
     }
 </style>
 

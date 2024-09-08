@@ -5,7 +5,13 @@
             <h2>Live CCTV Footage</h2>
             <div class="cctv-box">
                 <img src="path_to_cctv_image_or_video_placeholder" alt="Live CCTV Footage" class="cctv-image">
-                <p class="cctv-status">Live Feed Status: <span class="cctv-indicator"></span></p>
+                <div class="cctv-info">
+                    <p class="cctv-status">Live Feed Status: <span class="cctv-indicator">Active</span></p>
+                    <div class="cctv-details">
+                        <p class="detail-item"><i class="fas fa-map-marker-alt"></i> Location: Bagru, Jaipur</p>
+                        <p class="detail-item"><i class="fas fa-clock"></i> Timestamp: 09-Sep-2024 14:45:30</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -25,7 +31,10 @@
         <div class="status-section">
             <h2>Current Status of Post Area</h2>
             <div class="status-box">
-                <p class="status-text">Status: <span class="status-indicator"></span></p>
+                <p class="status-text">Status: <span class="status-indicator">Clean</span></p>
+                <div class="swachhta-mitra">
+                    <p class="mitra-name"><i class="fas fa-user-alt"></i> Swachhta Mitra: Rajesh Kumar</p>
+                </div>
             </div>
         </div>
 
@@ -39,13 +48,22 @@
 
 <!-- Styling -->
 <style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+
     .body-container {
         display: flex;
         justify-content: space-between;
         padding: 20px;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 80px); /* Adjusted height to account for footer */
         background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
         gap: 20px;
+        box-sizing: border-box;
+        overflow-y: auto; /* Allows vertical scrolling if content overflows */
     }
 
     .left-section, .right-section {
@@ -62,6 +80,7 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         color: #e0e0e0;
         animation: fadeIn 1s ease-in-out;
+        position: relative;
     }
 
     h2 {
@@ -92,8 +111,15 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
-    .cctv-status {
+    .cctv-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
         margin-top: 10px;
+    }
+
+    .cctv-status {
         font-size: 16px;
         font-family: 'Orbitron', sans-serif;
         color: #e0e0e0;
@@ -102,6 +128,21 @@
     .cctv-indicator {
         color: #28a745;
         font-weight: bold;
+    }
+
+    .cctv-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        color: #cfd8dc;
+        font-size: 14px;
+    }
+
+    .detail-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
 
     .alert-toggle {
@@ -165,6 +206,7 @@
 
     .status-section .status-box {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 200px;
@@ -178,6 +220,7 @@
         font-size: 20px;
         font-family: 'Orbitron', sans-serif;
         color: #e0e0e0;
+        margin-bottom: 10px;
     }
 
     .status-indicator {
@@ -187,6 +230,19 @@
         background: #ff4d4f;
         animation: blink 1.5s infinite;
         color: #ffffff;
+    }
+
+    .swachhta-mitra {
+        margin-top: 10px;
+    }
+
+    .mitra-name {
+        font-size: 16px;
+        font-family: 'Orbitron', sans-serif;
+        color: #c1dfc4;
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
 
     .options-section {
